@@ -31,7 +31,8 @@ export default function RootLayout({
 				<nav className="w-full p-10">
 					<div className="flex gap-10">
 						<Link href="/useActionState">useActionState</Link>
-						<Link href="/useOptimistic">useOptimistic</Link>
+						<Link href="/useTransition">useTransition</Link>
+						<Link href="/useFormStatus">useFormStatus</Link>
 					</div>
 				</nav>
 				<div className="fixed w-full h-full flex align-center justify-center">

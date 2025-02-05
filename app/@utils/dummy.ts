@@ -8,3 +8,8 @@ export async function updateName(name: string) {
 		throw new Error("Name is required");
 	}
 }
+
+export async function updateItemName(name: string) {
+	await delay(2000);
+	return name;
+}
