@@ -1,13 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormStatus } from "react-dom";
 
 export default function Button() {
 	const { data, pending } = useFormStatus();
-	console.log(data && data.get("test"));
+	console.log("pending", pending);
+
+	useEffect(() => {
+		console.log("data", data?.get("content"));
+	}, [data]);
 	return (
-		<button type="submit" disabled={pending}>
+		<button
+			type="submit"
+			className="p-2 bg-[powderblue] rounded-sm"
+			disabled={pending}
+		>
 			{pending ? "제출중" : "제출하기"}
 		</button>
 	);
